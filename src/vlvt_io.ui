@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>VlvtIo</class>
+ <widget class="QWidget" name="VlvtIo">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>344</width>
+    <height>213</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>VlvtIo</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <property name="margin">
+    <number>6</number>
+   </property>
+   <item row="0" column="0">
+    <widget class="QTabWidget" name="tabWidget">
+     <property name="minimumSize">
+      <size>
+       <width>280</width>
+       <height>201</height>
+      </size>
+     </property>
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="tab">
+      <attribute name="title">
+       <string>Standard</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_2">
+       <item row="2" column="0">
+        <widget class="QLabel" name="label">
+         <property name="text">
+          <string>Position:</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="TReaderWriter" name="tReaderWriter">
+         <property name="source">
+          <string>$1/Position</string>
+         </property>
+         <property name="targets">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <widget class="TPushButton" name="tPushButton">
+         <property name="text">
+          <string>Open</string>
+         </property>
+         <property name="targets">
+          <string>$1-&gt;Open;</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="TPushButton" name="tPushButton_2">
+         <property name="text">
+          <string>Close</string>
+         </property>
+         <property name="targets">
+          <string>$1-&gt;Close;</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="0" colspan="2">
+        <widget class="TLabel" name="tState">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+           <horstretch>0</horstretch>
+           <verstretch>2</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="source">
+          <string>$1/State</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0" colspan="2">
+        <widget class="TLabel" name="tLabel_2">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+           <horstretch>0</horstretch>
+           <verstretch>1</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="source">
+          <string>$1/status</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tab_2">
+      <attribute name="title">
+       <string>Expert</string>
+      </attribute>
+      <layout class="QVBoxLayout">
+       <property name="spacing">
+        <number>6</number>
+       </property>
+       <property name="margin">
+        <number>9</number>
+       </property>
+       <item>
+        <layout class="QHBoxLayout">
+         <property name="spacing">
+          <number>6</number>
+         </property>
+         <property name="margin">
+          <number>0</number>
+         </property>
+         <item>
+          <widget class="QLabel" name="label_2">
+           <property name="text">
+            <string>Control:</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="TLabel" name="tLabel">
+           <property name="source">
+            <string>$1/localctrl</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="TLabel" name="tLabel_3">
+         <property name="trueColor">
+          <color>
+           <red>93</red>
+           <green>234</green>
+           <blue>78</blue>
+          </color>
+         </property>
+         <property name="falseColor">
+          <color>
+           <red>255</red>
+           <green>233</green>
+           <blue>68</blue>
+          </color>
+         </property>
+         <property name="trueString">
+          <string>Open Enabled</string>
+         </property>
+         <property name="falseString">
+          <string>Open Disabled</string>
+         </property>
+         <property name="source">
+          <string>$1/abigroup</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="TTable" name="tVlvtIoStat">
+         <property name="numRows">
+          <number>4</number>
+         </property>
+         <property name="numColumns">
+          <number>2</number>
+         </property>
+         <property name="trueColors">
+          <string>4284344910;4284344910;4284344910;4284344910;4294967295;4293342999;4293342999;4293342999</string>
+         </property>
+         <property name="falseColors">
+          <string>4294967295;4294967295;4293342999;4294961476;4294967295;4294967295;4294967295;4294967295</string>
+         </property>
+         <property name="trueStrings">
+          <string>Open;Close;VLV TMP OPEN;Operation;Intlk Bypass;Open Err;Close Err;Both Contacts</string>
+         </property>
+         <property name="falseStrings">
+          <string>---;---;VLV TMP CLOSED;Cutoff;---;---;---;---</string>
+         </property>
+         <property name="displayMask">
+          <string/>
+         </property>
+         <property name="source">
+          <string>$1/ValveStat</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <pixmapfunction>qPixmapFromMimeSource</pixmapfunction>
+ <customwidgets>
+  <customwidget>
+   <class>TLabel</class>
+   <extends>ELabel</extends>
+   <header>TLabel</header>
+  </customwidget>
+  <customwidget>
+   <class>TTable</class>
+   <extends>EFlag</extends>
+   <header>TTable</header>
+  </customwidget>
+  <customwidget>
+   <class>TPushButton</class>
+   <extends>QPushButton</extends>
+   <header>TPushButton</header>
+  </customwidget>
+  <customwidget>
+   <class>TReaderWriter</class>
+   <extends>TLabel</extends>
+   <header>TReaderWriter</header>
+  </customwidget>
+  <customwidget>
+   <class>ELabel</class>
+   <extends>QLabel</extends>
+   <header>ELabel</header>
+  </customwidget>
+  <customwidget>
+   <class>EFlag</class>
+   <extends>QWidget</extends>
+   <header>EFlag</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
